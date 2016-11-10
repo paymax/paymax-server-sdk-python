@@ -31,7 +31,7 @@ def changeExample():
     chargeId = json.loads(response)['id']
 
 def retrieve(chargeId = ''):
-    print u'查询接口返回',Charge.retrieve(chargeId)
+    print u'订单查询接口返回',Charge.retrieve(chargeId)
 
 changeExample()
 retrieve(chargeId=chargeId)
