@@ -89,7 +89,7 @@ def get(uri):
         print u'请求失败：',e
 
     #验签
-    if r.status_code < 400:
+    if r.status_code == 200:
         to_verify_data(r.headers,r.text)
     return r.text
 
@@ -123,7 +123,7 @@ def post(uri,body):
         print u'请求失败：',e
 
     #验签
-    if r.status_code < 400:
+    if r.status_code == 200:
         to_verify_data(r.headers,r.text)
     return r.text
 
